@@ -1,0 +1,20 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Campo</th>
+                <th scope="col">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let config of configuraciones; let conv of conv; let i = index">
+                <th>{{i + 1}}</th>
+                <td *ngIf="config.confTipo==='MAIL'">{{config.confCampo}}</td>
+                <td (click)="cambiarEstado()">
+                    <button type="button" class="{{color}}">{{text}}</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

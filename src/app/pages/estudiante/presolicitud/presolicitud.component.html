@@ -1,0 +1,46 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Autor</th>
+                <th>Titulo</th>
+                <th>Fecha envio</th>
+                <th>Convocatoria
+                    <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Todos</option>
+                    <option>CONV1</option>
+                    <option>CONV2</option>
+                </select>
+                </th>
+                <th>Estado
+                    <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Todos</option>
+                    <option>CONV1</option>
+                    <option>CONV2</option>
+                </select>
+                </th>
+                <th>Tipo
+                    <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Todos</option>
+                    <option>Proyecto Tecnico</option>
+                    <option>Articulo Cientifico</option>
+                </select>
+                </th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tema of tema; let conv of conv; let i = index">
+                <th>{{i + 1}}</th>
+                <td>{{tema.fkPer.perApellido}} {{tema.fkPer.perNombre}}</td>
+                <td>{{tema.temNombre}}</td>
+                <td>{{tema.temFechacreado}}</td>
+                <td>{{pre.fkIns.insNombre}}1</td>
+            </tr>
+            <!-- <tr *ngFor=" let conv of conv">
+                <td>{{pre.conNo}}1</td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>
